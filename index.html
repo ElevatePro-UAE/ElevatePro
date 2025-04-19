@@ -19,29 +19,121 @@
       scroll-behavior: smooth;
     }
 
-    nav {
-      background: #000000;
-      padding: 1.5rem 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
-    }
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    nav h1 {
-      font-size: 2rem;
-      color: #FFD700;
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
 
-    nav .logo {
-      width: 50px;
-      height: 50px;
-      background-color: #FFD700;
-      border-radius: 50%;
-    }
+nav {
+  background: #000000;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+}
+
+nav h1 {
+  font-size: 2rem;
+  color: #FFD700;
+}
+
+nav .logo {
+  width: 50px;
+  height: 50px;
+  background-color: #FFD700;
+  border-radius: 50%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #FFD700;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Logo Strip */
+.logo-strip {
+  padding: 2rem 3rem;
+  background-color: #333;
+  text-align: center;
+}
+
+.logo-strip h3 {
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.company-logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.company-logos img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    padding: 1rem 2rem;
+  }
+}
+
 
     section {
       padding: 4rem 2rem;
@@ -102,6 +194,7 @@
     .text-content {
       flex: 1 1 55%;
       text-align: left;
+      margin-top: -3vw;
     }
 
     .image-slot {
@@ -219,10 +312,6 @@
   
 }
 
-#offerings {
-  padding: 2rem;
-}
-
 .offerings-container {
   display: flex;
   flex-wrap: wrap;
@@ -237,7 +326,7 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  width: 420px;
+  width: 40vw;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -284,19 +373,54 @@
   margin-top: -2vw;
 }
 
+@media (max-width: 1024px) {
+
+  .bundle {
+      width: 80vw;
+    }
+    .bundle-image{
+    margin-top: -4vw;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .bundle {
+        width: 80vw;
+        margin-top: -4vw;
+  }
+
+    .bundle-image{
+    margin-top: -4vw;
+    }
+}
+
+
 
     
   </style>
 </head>
 <body>
-  <nav>
-    <h1>ElevatePro</h1>
-    <div class="aboutUs">AboutUs</div>
-    <div class="aboutUs">Terms & Conditions</div>
-    <div class="aboutUs">Career</div>
 
 
-  </nav>
+<nav>
+        <h1>ElevatePro</h1>
+        <!-- <div class="logo"></div> -->
+    
+        <!-- Hamburger Button -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+    
+        <!-- Navigation Links -->
+        <div class="nav-links">
+          <a href="#">About Us</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Career</a>
+        </div>
+</nav>
 
   <section id="about">
     <div id="header1Txt">Learn from Top Industry Experts Invited from Global Companies! <br> Get connected to our alumni network of IITs, NITs and IIMs!</div>
@@ -306,6 +430,7 @@
     </div>
     <div class="image-slot"><img src="https://cdn.pixabay.com/photo/2024/03/21/09/52/ai-generated-8647282_1280.jpg" alt="About Image"></div>
   </section>
+
 
   <div class="logo-strip">
     <h3>Experts Invited From Companies Like:</h3>
@@ -317,9 +442,11 @@
     </div>
   </div>
 
+  </div>
+
   <section id="offerings">
     <div class="text-content">
-      <h2 style="text-align:center; font-size: 2rem; margin-top: 2rem;">Our Offerings</h2>
+      <h2 style="text-align:center; font-size: 2rem;">Our Offerings</h2>
       <div class="offerings-container">
         <div class="bundle">
           <div class="bundle-text">
@@ -358,33 +485,35 @@
   <section id="why">
     <div class="text-content">
       <h2>Why ElevatePro</h2>
+  
       <div class="card">
         <div class="tick">✔</div>
-        <p>Mock interviews conducted by top industry professionals from companies like Google, McKinsey, Amazon, and Goldman Sachs.</p>
+        <p>Powered by <strong>Elevate Group FZE</strong> — backed by real business and education experience in the UAE</p>
       </div>
+      
       <div class="card">
         <div class="tick">✔</div>
-        <p>Each expert is an alumnus of IIT, NIT, or IIM.</p>
+        <p><strong>Marketplace Structure</strong> — connect with vetted professionals from global companies</p>
       </div>
+      
       <div class="card">
         <div class="tick">✔</div>
-        <p>Interview preparation kits tailored for finance roles and other competitive industries.</p>
+        <p><strong>Career-Centric</strong> — we focus on what gets you hired, not just academically sound</p>
       </div>
+      
       <div class="card">
         <div class="tick">✔</div>
-        <p>Personalized CV feedback and career coaching.</p>
+        <p><strong>Global Readiness</strong> — aligned with expectations from UAE, India, US, UK job markets</p>
       </div>
+      
       <div class="card">
         <div class="tick">✔</div>
-        <p>Access to frameworks and best practices for answering interview questions.</p>
-      </div>
-      <div class="card">
-        <div class="tick">✔</div>
-        <p>Training on body language, voice modulation, and confidence building.</p>
+        <p><strong>Flexible & Scalable</strong> — pay per session or subscribe monthly</p>
       </div>
     </div>
     <!-- <div class="image-slot"><img src="https://source.unsplash.com/400x250/?interview,coach" alt="Why ElevatePro"></div> -->
   </section>
+  
 
   <div class="job-help">
     <h2>How ElevatePro Can Help You Crack Your Job</h2>
@@ -396,5 +525,13 @@
     <p>&copy; ElevatePro is a digital platform operated by Elevate Group FZE, a company incorporated in the Sharjah Research, Technology and Innovation Park (SRTIP), UAE.
     </p>
   </footer>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>  
+
 </body>
 </html>
