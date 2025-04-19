@@ -3,558 +3,398 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neuro Academy</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  
-
-  
+  <title>ElevatePro | Mock Interviews & CV Prep</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    .banner-overlay {
-      background-color: white;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    [x-cloak] {
-      display: none;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      scroll-behavior: smooth;
     }
 
-    #banner-container {
-      position: relative;
-      height: auto;
+    nav {
+      background: #000000;
+      padding: 1.5rem 3rem;
       display: flex;
-      justify-content: center;
-      padding: 1rem 0;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
     }
 
-    #banner {
-      height: 27vw;
-      width: 48vw;
+    nav h1 {
+      font-size: 2rem;
+      color: #FFD700;
     }
 
-    @media (max-width: 768px) {
-      #banner-container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        margin-top: 1rem;
-        padding: 1rem;
-      }
-
-      #banner {
-        height: 63vw;
-        margin-left: 25vw;
-        width: 100vw;
-      }
+    nav .logo {
+      width: 50px;
+      height: 50px;
+      background-color: #FFD700;
+      border-radius: 50%;
     }
 
-    #header-text {
-      text-align: center;
-      margin-bottom: 0vw;
-      margin-top: 8vw;
-      font-size: 2.5vw;
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
     }
 
-    @media (max-width: 768px) {
-      #header-text {
-        font-size: 1.5rem;
-        margin-top: 5rem;
-        margin-bottom: 1rem;
-        padding: 0 1rem;
-      }
+    section:nth-of-type(even) {
+      flex-direction: row-reverse;
     }
 
-    #pricing{
-      background-color: white;
-    }
-
-    #formHeaderTxt {
-      font-size: 1rem;
-      font-weight: 700;
-      color: white;
-      text-align: center;
+    h2 {
+      color: #FFD700;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
-      background: linear-gradient(to right, #1b1c1f, #201f20);
-      padding: 0.75rem 1rem;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    #logo {
-      height: 12vw;
-      width: 12vw;
-    }
-
-    @media (max-width: 768px) {
-      #logo {
-        height: 30vw;
-        width: 30vw;
-      }
-    }
-
-    .perks-bar {
-      color: #1f2937;
-      font-size: 1.1rem;
-      font-weight: 500;
-      padding: 16px 24px;
-      width: 95%;
-      margin-left: -4vw;
-      border-radius: 12px;
-      line-height: 1.6;
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
-      margin-top: -2vw;
-      font-style: italic;
-    }
-
-    #registerwithUsOfferings{
-      color: white;
-      font-size: 1.5rem;
-      font-weight: 500;
-      padding: 16px 24px;
-      width: 95%;
       text-align: center;
-      border-radius: 12px;
-      line-height: 1.6;
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
-      margin-top: 2vw;
-      font-weight: 800;
     }
 
-    #perks, #whyAcademyTxt{
+    p, ul li {
+      color: #eeeeee;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .card {
+      background: #2c2c2c; /* Darker background */
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card .tick {
+      color: #FFD700;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      color: #eeeeee;
+      font-size: 1rem;
+    }
+
+   
+    .text-content {
+      flex: 1 1 55%;
+      text-align: left;
+    }
+
+    .image-slot {
+      flex: 1 1 40%;
+      height: 250px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    }
+
+    .image-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: auto;
+      border-radius: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, #FFD700, #ffb700);
+      color: #000;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-strip {
+      background: #1a1a1a;
+      padding: 2rem;
+      text-align: center;
+      border-top: 2px solid #333;
+      border-bottom: 2px solid #333;
+    }
+
+    .logo-strip h3 {
+      color: #FFD700;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .company-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .company-logos img {
+      height: 40px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    .job-help {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, #ff6f61, #ffcc70);
+      color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+
+    .job-help h2 {
+      font-size: 2rem;
+      color: #FFD700;
+      margin-bottom: 1rem;
+    }
+
+    .job-help p {
+      font-size: 1.2rem;
+      color: #eeeeee;
+    }
+
+    .one-on-one-logo {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    footer {
+      background: #000;
+      color: #FFD700;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    #header1Txt {
+      text-align: center;
+      margin-left: 3vw;
+      font-size: 2rem;
+      color: #FFD700;
       margin-top: -2vw;
     }
 
-    /* Form will be relative always, placed in flow */
-    #registration-form {
-      position: relative;
-      width: 100%;
-      max-width: 24rem;
-      z-index: 10;
-    }
-
-    @media (max-width: 768px) {
-  .flex.md\:flex-row {
-    flex-direction: column !important;
-  }
-
-  .flex.md\:flex-row > div:nth-child(1) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .flex.md\:flex-row > div:nth-child(1) .perks-bar {
-    order: 1;
-    text-align: center;
-  }
-
-  #registration-form {
-    order: 2;
-    margin-left: 2vw;
-  }
-
-  .flex.md\:flex-row > div:nth-child(1) #banner-container {
-    order: 3;
-  }
-
-  #perks{
-    margin-top: 2vw;
-  }
+#offerings {
+     padding: 4rem 2rem;
 }
 
+.text-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #FFD700;
+  
+}
+
+#offerings {
+  padding: 2rem;
+}
+
+.offerings-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.bundle {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 420px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bundle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.bundle-text {
+  background-color: rgb(6, 209, 255);
+  padding: 1rem;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-bottom: 3vw;
+}
+
+.bundle-text h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.price {
+  color: #000000;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.features p {
+  margin: 0.3rem 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.bundle-image {
+  flex-grow: 1;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  margin-top: -2vw;
+}
+
+
+    
   </style>
-  
 </head>
-<body class="font-sans">
+<body>
+  <nav>
+    <h1>ElevatePro</h1>
+    <div class="aboutUs">AboutUs</div>
+    <div class="aboutUs">Terms & Conditions</div>
+    <div class="aboutUs">Career</div>
+
+
+  </nav>
+
+  <section id="about">
+    <div id="header1Txt">Learn from Top Industry Experts Invited from Global Companies! <br> Get connected to our alumni network of IITs, NITs and IIMs!</div>
+    <div class="text-content">
+      <p style="text-align: left;">ElevatePro, a brand under Elevate Group FZE (UAE), empowers students to meet their career goals. We specialize in industry-grade mock interviews and CV building - conducted by industry experts from the IIT, IIM and NIT alumni network, invited from top firms including Amazon, Deloitte, BNY Mellon, Landmark and a lot more.</p>
+      <a href="#" class="button">Live 1-1 Sessions - Book Now</a>
+    </div>
+    <div class="image-slot"><img src="https://cdn.pixabay.com/photo/2024/03/21/09/52/ai-generated-8647282_1280.jpg" alt="About Image"></div>
+  </section>
+
+  <div class="logo-strip">
+    <h3>Experts Invited From Companies Like:</h3>
+    <div class="company-logos">
+      <img id="logo1" src="https://download.logo.wine/logo/LinkedIn/LinkedIn-Logo.wine.png" alt="LinkedIn">
+      <img id="logo2" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+      <img id="logo3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Deloitte.svg/2560px-Deloitte.svg.png" alt="Deloitte">
+      <img id="logo4" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Bank_of_New_York_Mellon_logo.svg" alt="BNY Mellon">
+    </div>
+  </div>
+
+  <section id="offerings">
+    <div class="text-content">
+      <h2 style="text-align:center; font-size: 2rem; margin-top: 2rem;">Our Offerings</h2>
+      <div class="offerings-container">
+        <div class="bundle">
+          <div class="bundle-text">
+            <h3>Package 1 @ INR 6999/-</h3>
+            <!-- <p class="price">Rs. 6999</p> -->
+            <div class="features">
+              <p>✔ 5 Mock Interview Rounds</p>
+              <p>✔ 3 CV Preparation Rounds</p>
+              <p>✔ 10 Job Referrals through our Network</p>
+              <p>✔ Customized Preparation Kit</p>
+              <p>✔ Additional frameworks for answers</p>
+            </div>
+          </div>
+          <div class="bundle-image" style="background-image: url('https://cdn.pixabay.com/photo/2024/06/03/09/27/woman-8805927_1280.jpg');"></div>
+        </div>
   
-<!-- Navbar -->
-<nav class="bg-white shadow-md fixed w-full z-50 top-0" x-data="{ open: false }">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-16 items-center">
-      <div class="flex-shrink-0">
-        <!-- Logo Image -->
-        <a href="#home">
-          <!-- <img id="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Neuro Academy Logo" class="h-10 w-auto"> -->
-          <img id="logo" src="static/images/logo.png" alt="Neuro Academy Logo">
-        </a>
-      </div>
-      <div class="hidden md:flex ml-auto space-x-6">
-        <a href="#home" class="text-gray-700 hover:text-indigo-600 font-medium">Home</a>
-        <a href="#courses" class="text-gray-700 hover:text-indigo-600 font-medium">Courses</a>
-        <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium">About</a>
-        <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium">Contact</a>
-      </div>
-      <div class="flex items-center space-x-4">
-        <button @click="open = !open" class="md:hidden text-gray-700 hover:text-indigo-600">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <div class="bundle">
+          <div class="bundle-text">
+            <h3>Package 2 @ INR 8999/-</h3>
+            <!-- <p class="price">Rs. 8999</p> -->
+            <div class="features">
+              <p>✔ 10 Mock Interview Rounds</p>
+              <p>✔ 5 CV Preparation Rounds</p>
+              <p>✔ 20 Job Referrals through our Network</p>
+              <p>✔ Customized Preparation Kit</p>
+              <p>✔ Additional frameworks for answers</p>
+            </div>
+          </div>
+          <div class="bundle-image" style="background-image: url('https://cdn.pixabay.com/photo/2024/03/27/04/59/ai-generated-8658200_1280.jpg');"></div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="md:hidden" x-show="open" x-cloak>
-    <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
-    <a href="#courses" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Courses</a>
-    <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
-    <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
-  </div>
-</nav>
-
-
-
-  <!-- Success message -->
-  <div id="success-message" class="p-6 bg-green-100 text-green-800 rounded-lg shadow-lg text-center absolute top-10 left-1/2 transform -translate-x-1/2 z-50 w-96" style="display: none;">
-    🎉 Thank you! Your response has been successfully recorded.
-  </div>
-
-  <!-- Banner with Form -->
-  <div class="relative w-full">
-<!--     
-    <div id="header-text">
-      Learn from India's topnotch educators - the IIT, NIT and IIM Alumni!
-    </div> -->
-
-    <h2 id="header-text" class="text-3xl md:text-4xl font-extrabold text-center text-gray-800 mb-12">
-      Learn from India's top-notch educators — 
-      <span style="color:rgb(255, 24, 24)" class="text-indigo-800">the IIT, NIT and IIM Alumni!</span>
-    </h2>
-    
-    <div class="flex md:flex-row justify-center items-start gap-6 p-4 md:p-12">
-
-      <!-- LEFT SIDE: Perks + Banner -->
-      <div class="flex flex-col items-center md:items-start md:w-1/2">
-        <!-- Perks -->
-        <div class="perks-bar">
-          <div>💬 Lifetime Free Doubt Support</div>
-          <div>🧾 Free Company Referrals for future jobs</div>
-          <div>👨‍🏫 Lifetime Free Support of  IIT, NIT and IIM Alumni for future jobs</div>
-          <div>🗨️ Free English Conversation & Ethical AI Classes</div>
-          <div>⚡ Most Amazing Shortcuts!</div>
-        </div>
-    
-        <!-- Banner (just below perks) -->
-        <div id="banner-container">
-          <!-- <img id="banner" src="{{ url_for('static', filename='images/banner.gif') }}" alt="Neuro Banner"> -->
-          <img id="banner" src="static/images/banner.gif" alt="Neuro Banner">
-        </div>
-      </div>
-    
-      <!-- Registration Form -->
-      <div id="registration-form"
-         class="relative bg-gradient-to-br from-indigo-100 via-white to-purple-100 backdrop-blur-md p-4 rounded-2xl shadow-xl w-full md:w-96 border border-indigo-200 z-40">
-      <h2 id="formHeaderTxt" class="text-lg font-semibold text-center text-indigo-800 mb-3 leading-tight">
-        Register with us and we will connect with you!
-      </h2>
-    
-      <form 
-        action="https://docs.google.com/forms/d/1ktA1NNqxE3_WrcdsUxmlcJLZkBJghsdmcTAx73u7be0/formResponse" 
-        method="POST" 
-        target="hidden_iframe" 
-        onsubmit="handleSubmit(event);"
-      >
-        <div class="mb-2">
-          <input 
-            type="text" 
-            placeholder="Student's Full Name" 
-            name="entry.366340186" 
-            class="mt-1 py-1.5 px-2.5 text-sm w-full border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" 
-            required>
-        </div>
-        <div class="mb-2">
-          <input 
-            type="tel" 
-            placeholder="Mobile Number" 
-            name="entry.937760534" 
-            class="mt-1 py-1.5 px-2.5 text-sm w-full border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" 
-            required>
-        </div>
-        <div class="mb-2">
-          <input 
-            type="email" 
-            placeholder="Email Address" 
-            name="entry.546767355" 
-            class="mt-1 py-1.5 px-2.5 text-sm w-full border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" 
-            required>
-        </div>
-        <div class="mb-2">
-          <input 
-            type="text" 
-            placeholder="Country" 
-            name="entry.1360296175" 
-            class="mt-1 py-1.5 px-2.5 text-sm w-full border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" 
-            required>
-        </div>
-        <div class="mb-3">
-          <input 
-            type="text" 
-            placeholder="State/Province" 
-            name="entry.1286360088" 
-            class="mt-1 py-1.5 px-2.5 text-sm w-full border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" 
-            required>
-        </div>
-        <button 
-          type="submit" 
-          class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm px-4 py-2 w-full rounded-md font-semibold shadow hover:from-indigo-700 hover:to-purple-700 transition duration-300"
-        >
-          Submit
-        </button>
-      </form>
-    </div>
-  </div>  
-</div>
- 
-
-    <!-- Perks Section -->
-<section class="bg-black py-16 px-6 md:px-20" id="perks">
-  <h2 id="whyAcademyTxt" class="text-3xl md:text-4xl font-extrabold text-center text-indigo-300 mb-12">
-    Our <span class="text-purple-300">Unique Offerings</span>
-  </h2>
+  </section>
   
-  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-    
-    <!-- Card 1 -->
-    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition duration-300 transform hover:scale-105 cursor-pointer">
-      <div class="text-3xl text-indigo-600 mb-4 text-center"> 
-        🎓
-      </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800 text-center">Lifetime Free Career Guidance</h3>
-      <p class="text-gray-600 text-center">We mentor your child beyond school and college, helping them navigate career choices every step of the way.</p>
-    </div>
-    
-    <!-- Card 2 -->
-    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition duration-300 transform hover:scale-105 cursor-pointer">
-      <div class="text-3xl text-indigo-600 mb-4 text-center">
-        📚
-      </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800 text-center">Lifetime Free Doubt Support</h3>
-      <p class="text-gray-600 text-center">Have a question? Ask anytime — we're with you throughout your learning journey, for life.</p>
-    </div>
 
-    <!-- Card 3 -->
-    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition duration-300 text-center transform hover:scale-105 cursor-pointer">
-      <div class="text-3xl text-indigo-600 mb-4">
-        🗨️
+  <section id="why">
+    <div class="text-content">
+      <h2>Why ElevatePro</h2>
+      <div class="card">
+        <div class="tick">✔</div>
+        <p>Mock interviews conducted by top industry professionals from companies like Google, McKinsey, Amazon, and Goldman Sachs.</p>
       </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800">Free English Conversation Classes</h3>
-      <p class="text-gray-600">Gain fluency in English! Learn to think, frame, and express confidently — essential for interviews, negotiations, and business communications.</p>
-    </div> 
-
-    <!-- Card 4 -->
-    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition duration-300 text-center transform hover:scale-105 cursor-pointer">
-      <div class="text-3xl text-indigo-600 mb-4">
-        🧾 
+      <div class="card">
+        <div class="tick">✔</div>
+        <p>Each expert is an alumnus of IIT, NIT, or IIM.</p>
       </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800">Free Company Referrals</h3>
-      <p class="text-gray-600">Clear our mock interviews and get referred to top companies through our vast IIT, NIT, and IIM alumni network for diverse job profiles.</p>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition duration-300 text-center transform hover:scale-105 cursor-pointer">
-      <div class="text-3xl text-indigo-600 mb-4">
-        👔
+      <div class="card">
+        <div class="tick">✔</div>
+        <p>Interview preparation kits tailored for finance roles and other competitive industries.</p>
       </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800">CV & Interview Preparation</h3>
-      <p class="text-gray-600">Get your CV reviewed by industry professionals, receive expert feedback, and get live projects to boost your resume.</p>
+      <div class="card">
+        <div class="tick">✔</div>
+        <p>Personalized CV feedback and career coaching.</p>
+      </div>
+      <div class="card">
+        <div class="tick">✔</div>
+        <p>Access to frameworks and best practices for answering interview questions.</p>
+      </div>
+      <div class="card">
+        <div class="tick">✔</div>
+        <p>Training on body language, voice modulation, and confidence building.</p>
+      </div>
     </div>
+    <!-- <div class="image-slot"><img src="https://source.unsplash.com/400x250/?interview,coach" alt="Why ElevatePro"></div> -->
+  </section>
 
-    <!-- Card 12 -->
-  <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition duration-300 text-center transform hover:scale-105 cursor-pointer">
-    <div class="text-3xl text-purple-600 mb-4">
-      ⚡
-    </div>
-    <h3 class="text-xl font-semibold mb-2 text-gray-800">Top-notch Shortcuts</h3>
-    <p class="text-gray-600">Not just the right answers — we teach you the fastest way to get there. Learn the secret shortcuts that helped your mentors crack JEE & CAT!</p>
+  <div class="job-help">
+    <h2>How ElevatePro Can Help You Crack Your Job</h2>
+    <p>With personalized mock interviews, CV feedback, and guidance from top industry experts, ElevatePro helps you hone your skills and build the confidence needed to ace your job interviews. Whether you're targeting top firms or competitive industries, we equip you with the tools you need for success.</p>
   </div>
 
-    <!-- Card 6 -->
-    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition duration-300 text-center transform hover:scale-105 cursor-pointer">
-      <div class="text-3xl text-purple-600 mb-4 text-center">
-        🎯
-      </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800">Personalized Learning</h3>
-      <p class="text-gray-600">Customized plans that match your child's unique pace and learning style — no one-size-fits-all here.</p>
-    </div>
 
-    <!-- Card 7 -->
-    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition duration-300 transform hover:scale-105 cursor-pointer">
-      <div class="text-3xl text-indigo-600 mb-4 text-center">
-        💡
-      </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800 text-center">Motivational Therapy</h3>
-      <p class="text-gray-600 text-center">Real stories of grit and success from our IIT, NIT and IIM alumni to inspire and uplift your child regularly.</p>
-    </div>
-
-    <!-- Card 8 -->
-    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition duration-300 text-center transform hover:scale-105 cursor-pointer">
-      <div class="text-3xl text-purple-600 mb-4 text-center">
-        🤝
-      </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800">Mentors That Feel Like Friends</h3>
-      <p class="text-gray-600">Friendly, supportive educators who connect emotionally with your child and help in any academic struggle.</p>
-    </div>
-
-
-    <!-- Card 9 -->
-    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition duration-300 text-center transform hover:scale-105 cursor-pointer">
-      <div class="text-3xl text-purple-600 mb-4 text-center">
-        🧠
-      </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800">Workshops & Quizzes</h3>
-      <p class="text-gray-600">Interactive sessions, fun competitions, and real-time challenges to keep students sharp and engaged.</p>
-    </div>
-
-    <!-- Card 10 -->
-    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition duration-300 text-center transform hover:scale-105 cursor-pointer">
-      <div class="text-3xl text-indigo-600 mb-4">
-        🚀
-      </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800">Live Projects & Case Study Competitions</h3>
-      <p class="text-gray-600">Work on real-world projects and compete in case studies and hackathons designed to spark creativity and problem-solving skills to build your resume.</p>
-    </div>
-
-    <!-- Card 11 -->
-    <div class="bg-white rounded-3xl shadow-xl p-6 hover:shadow-2xl transition duration-300 text-center transform hover:scale-105 cursor-pointer">
-      <div class="text-3xl text-indigo-600 mb-4">
-        📘
-      </div>
-      <h3 class="text-xl font-semibold mb-2 text-gray-800">Covers All Major Subjects</h3>
-      <p class="text-gray-600">From classes 6-10, we cover all the major subjects besides Ethical AI, Aptitude, and Logical Reasoning for competitive exams like Banking and more.</p>
-    </div>
-  </div>
-  <div id ="registerwithUsOfferings">
-    Register with us to avail these unique offerings!
-  </div>
-</section>
-
-
-<section class="px-4 py-12 bg-white" id="pricing">
-  <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">Courses and Pricing</h2>
-
-  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    <!-- One Subject Plan -->
-    <div class="rounded-2xl shadow-xl p-8 transform transition duration-500 md:hover:scale-105 hover:shadow-2xl text-center bg-gradient-to-br from-indigo-50 to-indigo-200 animate-fade-up">
-      <h3 class="text-2xl font-bold text-black mb-6">Classes 6-10, Per Subject Plan</h3>
-      <ul class="space-y-6 text-gray-800">
-        <li>
-          <span class="block font-semibold text-lg"> 3 Months:</span>
-          ₹3,000 <span class="text-sm text-gray-700">(₹1,000/month)</span>
-        </li>
-        <li>
-          <span class="block font-semibold text-lg"> 6 Months:</span>
-          ₹5,400 <span class="text-sm text-gray-700">(₹900/month)</span>
-        </li>
-        <li class="bg-indigo-100 rounded-xl p-4 border border-indigo-300">
-          <span class="block font-semibold text-lg text-indigo-900"> 12 Months <span class="text-sm">(Best Value!)</span></span>
-          ₹9,600 <span class="text-sm text-gray-700">(₹800/month)</span>
-        </li>
-      </ul>
-      <p style="margin-top: 1vw;" class="mt-6 text-sm text-gray-700">
-        📘 Available Subjects: Maths, Science, English, Computer Science, Aptitude + Logical Reasoning<br><br>
-        💬 <b>Free English Speaking Classes + 🤖 Ethical AI sessions to boost thinking & future readiness!</b><br><br>
-        📚 <b>Lifetime Free doubt support, Lifetime Free carrer guidance & future job referrals</b>
-      </p>
-    </div>
-
-    <!-- CV & Interview Prep -->
-    <div class="rounded-2xl shadow-xl p-8 transform transition duration-500 md:hover:scale-105 hover:shadow-2xl text-center bg-gradient-to-br from-green-50 to-green-200 animate-fade-up">
-      <h3 class="text-2xl font-bold text-black mb-6">CV & Interview Prep</h3>
-      <ul class="space-y-6 text-gray-800">
-        <li class="bg-green-100 rounded-xl p-4 border border-green-300">
-          <span class="block font-semibold text-lg text-green-900"> 100 Days Complete Plan</span>
-          ₹2,500 <span class="text-sm text-gray-700">(One-time)</span>
-        </li>
-        <li>
-          <span class="block font-semibold text-lg">✅ Includes:</span>
-          
-          <p style="margin-top: 1vw;" class="mt-6 text-sm text-gray-700">
-            <b>Weekly Mock Interviews and feedback by IIT, NIT and IIM Alumni from top companies </b><br><br>
-            <b>Professional Resume Building support</b><br><br>
-            <b>Free referrals to companies and startups</b><br><br>
-            <b>1 Personalized internship project to boost CV</b><br><br>
-            <b>Free Group Discussion Sessions</b><br><br>
-            <b>Clear mock interviews for more referrals</b><br><br>
-            <b>1-to-1 English Speaking Classes</b><br><br>
-          </p>
-
-      <p class="mt-6 text-sm text-gray-700 italic">🚀 Perfect for college students & job seekers aiming for top roles!</p>
-    </div>
-
-    <!-- General Aptitude -->
-    <div class="rounded-2xl shadow-xl p-8 transform transition duration-500 md:hover:scale-105 hover:shadow-2xl text-center bg-gradient-to-br from-yellow-50 to-yellow-200 animate-fade-up">
-      <h3 class="text-2xl font-bold text-black mb-6">CAT, Banking and Competitve Exams</h3>
-      <ul class="space-y-6 text-gray-800">
-        <li>
-          <span class="block font-semibold text-lg"> 3 Months:</span>
-          ₹3,000 <span class="text-sm text-gray-700">(₹1000/month)</span>
-        </li>
-        <li>
-          <span class="block font-semibold text-lg"> 6 Months:</span>
-          ₹5,400 <span class="text-sm text-gray-700">(₹900/month)</span>
-        </li>
-        <li class="bg-yellow-100 rounded-xl p-4 border border-yellow-300">
-          <span class="block font-semibold text-lg text-yellow-900"> 12 Months <span class="text-sm">(Best Value!)</span></span>
-          ₹9,600 <span class="text-sm text-gray-700">(₹800/month)</span>
-        </li>
-      </ul>
-      <br>
-      <div class="block font-semibold text-lg">✅ Includes:</div>
-        <p style="margin-top: 1vw;" class="mt-6 text-sm text-gray-700">
-          🚀 <b>Aptitude + Logical Reasoning with Top-notch Shortcuts by IIT, NIT and IIM Alumni!</b><br><br>
-          📚 <b>Perfect for CAT, Banking, Govt & all Competitive Exams</b><br><br>
-        </p>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-    <section class="bg-gray-900 text-white py-12 px-6">
-      <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
-          Learning Made Fun, Future Made Bright!
-        </h2>
-        <h3 class="text-xl md:text-2xl font-semibold text-indigo-400 mb-6">
-          With Super Teachers from IITs, NITs & IIMs
-        </h3>
-        <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
-          At <span class="text-indigo-500 font-semibold">Neuro Academy</span>, learning feels like magic ✨ — with cool videos, smart tricks, and amazing mentors who turn every lesson into an adventure 🚀.
-        </p>
-      </div>
-    </section>
-    
-    <!-- Overlay for dark effect
-    <div class="absolute inset-0 banner-overlay"></div> -->
-
-    
-    
-  <!-- Hidden iframe to prevent redirect -->
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
-  <!-- JavaScript -->
-  <script>
-    function handleSubmit(event) {
-    event.preventDefault(); // Stop the form from submitting immediately
-
-    // Show the success message
-    const successMessage = document.getElementById("success-message");
-    successMessage.style.display = "block";
-
-    // Submit the form manually using the iframe trick
-    event.target.submit();
-
-    // Clear form immediately
-    event.target.reset();
-
-    // Hide success message after 3 seconds
-    setTimeout(() => {
-      successMessage.style.display = "none";
-    }, 3000);
-  }
-  </script>
+  <footer>
+    <p>&copy; ElevatePro is a digital platform operated by Elevate Group FZE, a company incorporated in the Sharjah Research, Technology and Innovation Park (SRTIP), UAE.
+    </p>
+  </footer>
 </body>
 </html>
