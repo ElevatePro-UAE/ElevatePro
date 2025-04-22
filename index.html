@@ -301,9 +301,6 @@ nav .logo {
     }
 
     footer {
-      background: #000;
-      color: #FFD700;
-      text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
     }
@@ -406,7 +403,9 @@ nav .logo {
       margin-top: 0.5rem;
       margin-bottom: 0.5rem;
       padding: 0.5rem 5rem;
-      background: linear-gradient(135deg, #080803, #252525);
+      /* background: linear-gradient(135deg, #080803, #252525);
+       */
+      background-color: #FEBD69;
       color: #000;
       font-weight: 600;
       border-radius: 30px;
@@ -414,7 +413,7 @@ nav .logo {
       font-size: 1rem;
       box-shadow: 0 4px 10px rgba(118, 118, 118, 0.3);
       transition: transform 0.2s ease;
-      color: white;
+      /* color: white; */
 }
 
 .GetNowBtn:hover{
@@ -492,7 +491,73 @@ nav .logo {
     }
 }
 
+/* perks for both colleges and individuals */
+.perks-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
 
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap; /* Make it responsive */
+  margin-top: 20px;
+}
+
+.perk-card {
+  background-color: #333;
+  border: 2px solid #ffd700; /* Luxurious golden border */
+  border-radius: 15px;
+  padding: 20px;
+  width: 30vw;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+  text-align: left;
+}
+
+.perk-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.perk-title {
+  font-size: 1.5rem;
+  color: #ffd700; /* Golden text */
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.perk-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.perk-list li {
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.perk-list li span {
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .perk-card {
+    width: 90%; /* Make the cards take more width on smaller screens */
+    margin-bottom: 20px;
+  }
+}
 
     
   </style>
@@ -522,8 +587,8 @@ nav .logo {
   <section id="about">
     <div id="header1Txt">Be Job-Ready with 1:1 Mentorship - Worldwide Industry experts & Leaders from IITs, NITs and IIMs are here for you!</div>
     <div class="text-content">
-      <p style="text-align: left;">ElevatePro, a marketplace by Elevate Group FZE (UAE), empowers students to meet their career goals. We specialize in industry-grade mock interviews and CV building by connecting you with industry experts from the IIT, IIM and NIT alumni network, from top firms including Amazon, Deloitte, BNY Mellon, Landmark and a lot more.</p>
-      <a href="#" class="button">💻 Live 1-1 Sessions - Book Now</a>
+      <p style="text-align: left;">ElevatePro, a marketplace by Elevate Group FZE (UAE), empowers students to meet their career goals. We specialize in industry-grade mock interviews and CV building by connecting you with industry experts from the IIT, IIM and NIT alumni network, from top firms including Amazon, Deloitte, BNY Mellon, Landmark and a lot more. We help give you a boost to corporate relationships!</p>
+      <a href="#offerings" class="button">💻 Live 1-1 Sessions - Book Now</a>
     </div>
     <div class="image-slot"><img src="https://cdn.pixabay.com/photo/2024/03/21/09/52/ai-generated-8647282_1280.jpg" alt="About Image"></div>
   </section>
@@ -544,18 +609,23 @@ nav .logo {
   <section id="offerings">
     <div class="text-content">
       <h2 style="text-align:center; font-size: 2rem;">Our Offerings</h2>
+      <p class="text" style="text-align: center; color: white; font-weight: 900; font-size: 1.6rem; margin-top: -2vw;">
+        Register as a college or an individual, and start your elevated journey! 🚀
+    </p>
       <div class="offerings-container">
         <div class="bundle">
           <div class="bundle-text Package1">
-            <h3>Package 1 @ INR 6999/-</h3>
+            <h3>@ INR 7999/- per student</h3>
             <!-- <p class="price">Rs. 6999</p> -->
             <div class="features">
-              <p>✔ 5 Mock Interview Rounds</p>
-              <p>✔ 3 CV Preparation Rounds</p>
+              <p>✔ 5 Mock Interview Rounds & Feedback</p>
+              <p>✔ 3 CV Building Rounds & authentication</p>
+              <p>✔ Professional CV Writing Style and Tools</p>
               <p>✔ 10 Job Referrals through our Network</p>
               <p>✔ Customized Preparation Kit</p>
               <p>✔ Additional frameworks for answers</p>
-              <a href="https://buy.stripe.com/test_dR67vh00o2QU8DefYY"><div class="GetNowBtn">Get Now</div></a>
+              <p>✔ Meet and Greet Industry Leaders</p>
+              <a href="https://buy.stripe.com/test_dR67vh00o2QU8DefYY"><div class="GetNowBtn">Buy Now</div></a>
             </div>
           </div>
           <div class="bundle-image" style="background-image: url('https://cdn.pixabay.com/photo/2024/06/03/09/27/woman-8805927_1280.jpg');"></div>
@@ -563,28 +633,82 @@ nav .logo {
   
         <div class="bundle">
           <div class="bundle-text Package2">
-            <h3>Package 2 @ INR 8999/-</h3>
+            <h3>@ INR 11999/- per student</h3>
             <!-- <p class="price">Rs. 8999</p> -->
             <div class="features">
-              <p>✔ 10 Mock Interview Rounds</p>
-              <p>✔ 5 CV Preparation Rounds</p>
+              <p>✔ 10 Mock Interview Rounds & Feedback</p>
+              <p>✔ 5 CV Building Rounds & authentication</p>
+              <p>✔ Professional CV Writing Style and Tools</p>
               <p>✔ 20 Job Referrals through our Network</p>
               <p>✔ Customized Preparation Kit</p>
               <p>✔ Additional frameworks for answers</p>
-              <a href="#"><div class="GetNowBtn">Get Now</div></a>
+              <p>✔ Meet and Greet Industry Leaders</p>
+              <a href="#"><div class="GetNowBtn">Buy Now</div></a>
             </div>
           </div>
           <div class="bundle-image" style="background-image: url('https://cdn.pixabay.com/photo/2024/03/27/04/59/ai-generated-8658200_1280.jpg');"></div>
         </div>
       </div>
+      <p class="text" style="text-align: center; color: white; font-weight: 900; font-size: 1.4rem; margin-top: 3vw;">
+        Select your package above to check-out!
+    </p>
     </div>
   </section>
   
+  <!-- B2B Section: Placement Focused -->
+        <!-- perks -->
+  <section class="perks-section">
+    <h2 style="text-align:center; font-size: 2rem; margin-top: -5vw;">Boost Your Individual/College Placements</h2>
+    <div class="card-container" style="margin-top:-0.5vw;">
+      <!-- Card for Individuals -->
+      <div class="perk-card perk-left">
+        <h3 class="perk-title">Perks for Individuals</h3>
+        <ul class="perk-list">
+          <li>💼 Personalized Mock Interviews</li>
+          <li>🎯 Industry-Specific Guidance</li>
+          <li>📈 Professional CV Building</li>
+          <li>🚀 Personalized Prep Kit and Job Referrals</li>
+        </ul>
+      </div>
+  
+      <!-- Card for Colleges -->
+      <div class="perk-card perk-right">
+        <h3 class="perk-title">Perks for Colleges</h3>
+        <ul class="perk-list">
+          <li>🏢 Improved Placement Rates</li>
+          <li>🤝 Strengthen Corporate Relationships</li>
+          <li>🎓 Industry-Ready Graduates</li>
+          <li>📢 Enhanced College Reputation</li>
+        </ul>
+      </div>
+    </div>
+    <a href="#offerings" class="button">💻 Live 1-1 Sessions - Book Now</a>
+    <p class="text" style="text-align: center; color: white; font-size: 1rem; margin-top: -2vw; padding: 2vw;">
+        For colleges, we enhance placement rates through corporate partnerships, industry-led mock interviews, CV workshops, and real-world insights—strengthening your institution’s reputation. For individuals, our personalized interview prep, resume guidance, and referral support help you secure top-tier job opportunities with confidence.  
+    </p>
+  </section>
+        <!-- <div class="grid-container">
+           <div class="left-column">
+                <p class="text" style="text-align: justify; color: white;">
+                    Designed to empower both educational institutions and individual learners, placements are our top priority. We understand that successful student placements are not just a reflection of your college’s efforts but also a direct pathway to future growth. Our tailored mock interview sessions and industry-specific guidance ensure your students are not just job-ready but interview-ready for top-tier firms. With mock interview rounds conducted by top professionals, personalized CV building workshops, and real-world industry insights, your students will be fully prepared to meet the demands of the corporate world. This will directly lead to higher placement rates and a stronger reputation for your college.        
+                </p>
+
+                <ul class="benefit-list">
+                    <li>💼 Students get exposure to high-profile recruiters</li>
+                    <li>🚀 Increased placement rates for your college</li>
+                    <li>🤝 Direct access to placement drives and corporate sponsorships</li>
+                    <li>🎓 Better industry connections for students</li>
+                </ul>
+                <a href="#offerings" class="cta-button">Get Started Today</a>
+            </div>
+         
+        </div> -->
+
 
   <section id="why">
     <div class="text-content">
-      <h2 id="whyTxt">Why ElevatePro</h2>
-  
+      <h2 id="whyTxt">Why ElevatePro?</h2>
+
       <div class="card">
         <div class="tick">✔</div>
         <p>Powered by <strong>Elevate Group FZE</strong> — backed by real business and education experience in the UAE</p>
@@ -607,18 +731,39 @@ nav .logo {
       
     <!-- <div class="image-slot"><img src="https://source.unsplash.com/400x250/?interview,coach" alt="Why ElevatePro"></div> -->
   </section>
-  
 
-  <div class="job-help">
+
+  <!-- <div class="job-help">
     <h2>How ElevatePro Can Help You Crack Your Job</h2>
     <p>With personalized mock interviews, CV feedback, and guidance from top industry experts, ElevatePro helps you hone your skills and build the confidence needed to ace your job interviews. Whether you're targeting top firms or competitive industries, we equip you with the tools you need for success.</p>
-  </div>
+  </div> -->
 
-
-  <footer>
-    <p>&copy; ElevatePro is a digital platform operated by Elevate Group FZE, a company incorporated in the Sharjah Research, Technology and Innovation Park (SRTIP), UAE.
-    </p>
+  <footer style="background-color: #1a1a1a; padding: 2rem 1rem; color: white;">
+    <div style="text-align: center;">
+        &copy; ElevatePro is a digital platform operated by Elevate Group FZE.
+      </div>
+    <div style="margin-left: 2rem; margin-bottom: 1rem; text-align: left;">
+      <div style="margin-bottom: 0.5rem;">
+        <strong>Email</strong><br>
+        <a href="mailto:contact@elevatepro.co" style="color: #ffffff; text-decoration: none;">contact@elevatepro.co</a>
+      </div>
+      <div style="margin-bottom: 0.5rem;">
+        <strong>Phone</strong><br>
+        <a href="tel:+971509876543" style="color: #ffffff; text-decoration: none;">+971 50 987 6543</a>
+      </div>
+      <div>
+        <strong>Address</strong><br>
+        Sharjah Research, Technology and Innovation Park (SRTIP), UAE
+      </div>
+    </div>
+    <div style="margin-top: 1rem; text-align: center;">
+        <a href="/privacy-policy.html" style="color: #ffffff; margin: 0 10px; text-decoration: none;">Privacy Policy</a> |
+        <a href="/terms-and-conditions.html" style="color: #ffffff; margin: 0 10px; text-decoration: none;">Terms & Conditions</a> |
+        <a href="/refund-policy.html" style="color: #ffffff; margin: 0 10px; text-decoration: none;">Refund Policy</a>
+      </div>
+ 
   </footer>
+  
 
 <script>
   function toggleMenu() {
