@@ -44,6 +44,7 @@ nav {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+  height: 8vw;
 }
 
 /* nav h1 {
@@ -249,6 +250,7 @@ nav .logo {
 
     .logo-strip {
       background: #1a1a1a;
+      /* background-color: #4d4602; */
       padding: 2rem;
       text-align: center;
       border-top: 2px solid #333;
@@ -257,8 +259,9 @@ nav .logo {
 
     .logo-strip h3 {
       color: #FFD700;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
+      /* color: #000; */
+      margin-bottom: 2rem;
+      font-size: 2rem;
     }
 
     .company-logos {
@@ -271,7 +274,7 @@ nav .logo {
     .company-logos img {
       height: 40px;
       object-fit: contain;
-      filter: brightness(0) invert(1);
+      /* filter: brightness(0) invert(1); */
     }
 
     .job-help {
@@ -302,7 +305,7 @@ nav .logo {
 
     footer {
       padding: 2rem;
-      font-size: 0.9rem;
+      /* font-size: 0.9rem; */
     }
 
     #header1Txt {
@@ -392,10 +395,35 @@ nav .logo {
   margin-top: -2vw;
 }
 
-#logo1, #logo4{
+#logo1{
     margin-top: -3.5vw;
     height: 10vw;
     width: 10vw;
+}
+
+#logo4{
+    margin-top: -3.5vw;
+    height: 8.5vw;
+    width: 8.5vw;
+}
+
+
+#logo2{
+    margin-top: -2vw;
+    height: 8.5vw;
+    width: 8.5vw;
+}
+
+#logo5{
+    margin-top: -2.5vw;
+    height: 8vw;
+    width: 8vw;
+}
+
+#logo7{
+    margin-top: -3.25vw;
+    height: 9.5vw;
+    width: 9.5vw;
 }
 
 .GetNowBtn{
@@ -456,7 +484,7 @@ nav .logo {
         transform: scale(1.02);
     }
     
-    #logo1, #logo4{
+    #logo1, #logo4, #logo5{
         margin-top: -10vw;
         height: 30vw;
         width: 30vw;
@@ -547,6 +575,11 @@ nav .logo {
   margin-right: 8px;
 }
 
+.brandlogo{
+    height: 11vw;
+    width: 11vw;
+}
+
 @media (max-width: 768px) {
   .card-container {
     flex-direction: column;
@@ -557,7 +590,17 @@ nav .logo {
     width: 90%; /* Make the cards take more width on smaller screens */
     margin-bottom: 20px;
   }
+ 
+  .brandlogo{
+    height: 30vw;
+    width: 30vw;    
 }
+nav{
+    height: 25vw
+};
+}
+
+
 
     
   </style>
@@ -566,8 +609,8 @@ nav .logo {
 
 
 <nav>
-        <h1>ElevatePro</h1>
-        <!-- <div class="logo"></div> -->
+        <!-- <h1>ElevatePro</h1> -->
+        <div><img class="brandlogo" src="images/brandlogo-2.png"></div>
     
         <!-- Hamburger Button -->
         <div class="hamburger" onclick="toggleMenu()">
@@ -578,16 +621,16 @@ nav .logo {
     
         <!-- Navigation Links -->
         <div class="nav-links">
-          <a href="#">About Us</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Career</a>
+          <a href="https://elevatepro-uae.github.io/ElevatePro/privacy-policy">Privacy Policy</a>
+          <a href="https://elevatepro-uae.github.io/ElevatePro/TermsAndConditions">Terms & Conditions</a>
+          <a href="#footer">Contact Us</a>
         </div>
 </nav>
 
   <section id="about">
     <div id="header1Txt">Be Job-Ready with 1:1 Mentorship - Worldwide Industry experts & Leaders from IITs, NITs and IIMs are here for you!</div>
     <div class="text-content">
-      <p style="text-align: left;">ElevatePro, a marketplace by Elevate Group FZE (UAE), empowers students to meet their career goals. We specialize in industry-grade mock interviews and CV building by connecting you with industry experts from the IIT, IIM and NIT alumni network, from top firms including Amazon, Deloitte, BNY Mellon, Landmark and a lot more. We help give you a boost to corporate relationships!</p>
+      <p style="text-align: left; margin-top: 3vw;">ElevatePro, a marketplace by Elevate Group FZE (UAE), empowers students to meet their career goals. We specialize in industry-grade mock interviews and CV building by connecting you with industry experts from the IIT, IIM and NIT alumni network, from top firms including Amazon, Deloitte, BNY Mellon, Landmark and a lot more. We help give you a boost to corporate relationships!</p>
       <a href="#offerings" class="button">💻 Live 1-1 Sessions - Book Now</a>
     </div>
     <div class="image-slot"><img src="https://cdn.pixabay.com/photo/2024/03/21/09/52/ai-generated-8647282_1280.jpg" alt="About Image"></div>
@@ -598,9 +641,15 @@ nav .logo {
     <h3>Connect with Industry Leaders & Experts From Companies Like:</h3>
     <div class="company-logos">
       <img id="logo1" src="https://download.logo.wine/logo/LinkedIn/LinkedIn-Logo.wine.png" alt="LinkedIn">
-      <img id="logo2" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
-      <img id="logo3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Deloitte.svg/2560px-Deloitte.svg.png" alt="Deloitte">
-      <img id="logo4" src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Bank_of_New_York_Mellon_logo.svg" alt="BNY Mellon">
+      <img id="logo2" src="images/amazonLogo.png" alt="Amazon">
+      <img id="logo3" src="https://ebacoy2g8cy.exactdn.com/wp-content/uploads/2024/09/deloitte-logo-svg-vector-WHITE.png?strip=all&lossy=1&fit=800%2C223&ssl=1" alt="Deloitte">
+      <img id="logo4" src="images/BNY-Mellon-Logo.png" alt="BNY Mellon">
+      <img id="logo5" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce">
+      <img id="logo6" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" alt="Walmart">
+      <img id="logo7" src="https://www.vyopta.com/wp-content/uploads/2019/08/Microsoft-Logo-White.png" alt="Microsoft">
+
+
+      
     </div>
   </div>
 
@@ -738,14 +787,14 @@ nav .logo {
     <p>With personalized mock interviews, CV feedback, and guidance from top industry experts, ElevatePro helps you hone your skills and build the confidence needed to ace your job interviews. Whether you're targeting top firms or competitive industries, we equip you with the tools you need for success.</p>
   </div> -->
 
-  <footer style="background-color: #1a1a1a; padding: 2rem 1rem; color: white;">
-    <div style="text-align: center;">
-        &copy; ElevatePro is a digital platform operated by Elevate Group FZE.
+  <footer id="footer" style="background-color: #1a1a1a; padding: 2rem 1rem; color: white; font-size: 1.1rem;">
+    <div style="text-align: center; margin-bottom: 2vw;">
+        &copy; ElevatePro is a marketplace operated by Elevate Group FZE, connecting students and colleges with industry leaders and experts globally.
       </div>
     <div style="margin-left: 2rem; margin-bottom: 1rem; text-align: left;">
       <div style="margin-bottom: 0.5rem;">
         <strong>Email</strong><br>
-        <a href="mailto:contact@elevatepro.co" style="color: #ffffff; text-decoration: none;">contact@elevatepro.co</a>
+        <a href="mailto:contact@elevatepro.co" style="color: #ffffff; text-decoration: none;">elevategroup.uae@gmail.com</a>
       </div>
       <div style="margin-bottom: 0.5rem;">
         <strong>Phone</strong><br>
@@ -756,10 +805,11 @@ nav .logo {
         Sharjah Research, Technology and Innovation Park (SRTIP), UAE
       </div>
     </div>
-    <div style="margin-top: 1rem; text-align: center;">
-        <a href="/privacy-policy.html" style="color: #ffffff; margin: 0 10px; text-decoration: none;">Privacy Policy</a> |
-        <a href="/terms-and-conditions.html" style="color: #ffffff; margin: 0 10px; text-decoration: none;">Terms & Conditions</a> |
-        <a href="/refund-policy.html" style="color: #ffffff; margin: 0 10px; text-decoration: none;">Refund Policy</a>
+    <div style="margin-top: 1.5rem; text-align: center;">
+        <a href="https://elevatepro-uae.github.io/ElevatePro/privacy-policy" style="color: #FFD700; margin: 0 10px; text-decoration: none;">Privacy Policy</a> |
+        <a href="https://elevatepro-uae.github.io/ElevatePro/TermsAndConditions" style="color: #FFD700; margin: 0 10px; text-decoration: none;">Terms & Conditions</a> |
+        <a href="#" style="color: #FFD700; margin: 0 10px; text-decoration: none;">Back to Top</a>
+        <!-- <a href="/refund-policy.html" style="color: #ffffff; margin: 0 10px; text-decoration: none;">Refund Policy</a> -->
       </div>
  
   </footer>
