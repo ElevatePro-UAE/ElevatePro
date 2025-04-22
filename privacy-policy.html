@@ -318,232 +318,35 @@ nav .logo {
       font-weight: 800;
     }
 
-#offerings {
-     padding: 4rem 2rem;
-}
-
-.text-content h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  font-weight: bold;
-  color: #FFD700;
-  
-}
-
-.offerings-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.bundle {
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  width: 35vw;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.bundle:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-.bundle-text {
-  background-color: rgb(6, 209, 255);
-  padding: 1rem;
-  text-align: center;
-  /* border-bottom-left-radius: 20px; */
-  /* border-bottom-right-radius: 20px; */
-  padding-bottom: 3vw;
-}
-
-.Package2{
-    background-color: #b576f8;
-}
-
-.bundle-text h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #222;
-}
-
-.price {
-  color: #000000;
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 0.5rem 0;
-}
-
-.features p {
-  margin: 0.3rem 0;
-  color: #333;
-  font-weight: 500;
-}
-
-.bundle-image {
-  flex-grow: 1;
-  height: 350px;
-  background-size: cover;
-  background-position: center;
-  margin-top: -2vw;
-}
-
-#logo1, #logo4{
-    margin-top: -3.5vw;
-    height: 10vw;
-    width: 10vw;
-}
-
-.GetNowBtn{
-      display: inline-block;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-      padding: 0.5rem 5rem;
-      background: linear-gradient(135deg, #080803, #252525);
-      color: #000;
-      font-weight: 600;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 1rem;
-      box-shadow: 0 4px 10px rgba(118, 118, 118, 0.3);
-      transition: transform 0.2s ease;
-      color: white;
-}
-
-.GetNowBtn:hover{
-    transform: scale(1.05);
-}
-
-#whyTxt{
-        margin-top: -2rem;
+  @media screen and (max-width: 768px) {
+    section h2 {
+      font-size: 2rem !important;
     }
 
-@media (max-width: 1024px) {
-
-  .bundle {
-      width: 80vw;
-    }
-    .bundle-image{
-    margin-top: -4vw;
+    section h3 {
+      font-size: 1.25rem !important;
     }
 
-    .bundle:hover {
-        transform: scale(1.02);
+    section p {
+      font-size: 0.95rem !important;
     }
-
-    #header1Txt{
-        margin-left: -5vw;
-    } 
-}
-
-@media (max-width: 768px) {
-    .bundle {
-        width: 80vw;
-        margin-top: -4vw;
   }
 
-    .bundle-image{
-    margin-top: -4vw;
+  @media screen and (max-width: 480px) {
+    section h2 {
+      font-size: 1.8rem !important;
     }
 
-    .bundle:hover {
-        transform: scale(1.02);
-    }
-    
-    #logo1, #logo4{
-        margin-top: -10vw;
-        height: 30vw;
-        width: 30vw;
+    section h3 {
+      font-size: 1.1rem !important;
     }
 
-    .image-slot {
-        height: 45vw;
+    section p {
+      font-size: 0.9rem !important;
     }
+  }
 
-    /* .button{
-        margin-left: 8vw;
-    } */
-
-    #header1Txt{
-        margin-left: -5vw;
-    } 
-
-    .GetNowBtn{
-        margin-bottom: 1.75rem;
-    }
-
-    .GetNowBtn:hover{
-        transform: scale(1.02);
-    }
-
-    #whyTxt{
-        margin-top: -3rem;
-    }
-
-    .card:hover{
-        transform: scale(1.02);
-    }
-}
-
-
-.payment-confirmation {
-  /* background: black; */
-  padding: 4rem 2rem;
-  text-align: center;
-  color: #FFD700;
-}
-
-.confirmation-box {
-  max-width: 600px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 16px;
-  background: #2c2c2c;
-  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
-}
-
-.confirmation-box h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.confirmation-box p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: #eeeeee;
-}
-
-.confirmation-box .button {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.75rem 2rem;
-  background: linear-gradient(135deg, #FFD700, #ffb700);
-  color: #000;
-  font-weight: bold;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
-}
-
-.confirmation-box .button.secondary {
-  background: #444;
-  color: #fff;
-}
-
-.confirmation-box .button:hover {
-  transform: scale(1.05);
-}
-
-.brandlogo{
+  .brandlogo{
     height: 11vw;
     width: 11vw;
 }
@@ -554,15 +357,15 @@ nav .logo {
     width: 30vw;    
 };
 }
-    
+
   </style>
 </head>
 <body>
 
 
 <nav>
-        <!-- <h1>ElevatePro</h1>
-          -->
+    <!-- <h1><a href="https://elevatepro-uae.github.io/ElevatePro" style="text-decoration: none;">ElevatePro</a></h1> -->
+
         <!-- <div class="logo"></div> -->
         <a href="https://elevatepro-uae.github.io/ElevatePro" style="text-decoration: none;"><img class="brandlogo" src="images/brandlogo-2.png"></a>
     
@@ -575,21 +378,45 @@ nav .logo {
     
         <!-- Navigation Links -->
         <div class="nav-links">
-          <a href="https://elevatepro-uae.github.io/ElevatePro/">Home</a>
-          <a href="https://elevatepro-uae.github.io/ElevatePro/privacy-policy">Privacy Policy</a>
-          <a href="https://elevatepro-uae.github.io/ElevatePro/TermsAndConditions">Terms & Conditions</a>
+            <a href="https://elevatepro-uae.github.io/ElevatePro/">Home</a>
+            <a href="https://elevatepro-uae.github.io/ElevatePro/TermsAndConditions">Terms & Conditions</a>
+            <a href="#footer">Contact Us</a>
         </div>
 </nav>
 
-<section class="payment-confirmation">
-    <div class="confirmation-box">
-      <h2>🎉 Payment Successful!</h2>
-      <p>Thank you! Our team has received all your details and we will connect with you within 2 working days.</p>
-      <p><strong>Best wishes! Keep learning and growing!</strong></p>
-      <a href="https://elevatepro-uae.github.io/ElevatePro/" class="button">Go to Homepage</a>
-      <a href="#contact" class="button secondary">Contact Support</a>
+
+<section style="color: #f5c542; padding: 5vw;">
+    <div style="max-width: 1000px; margin: auto;">
+      <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 2vw;">Privacy Policy</h2>
+  
+      <p style="margin-bottom: 1.5vw; font-size: 1rem; text-align: left;">
+        Welcome to ElevatePro, a digital platform operated by Elevate Group FZE, under the Sharjah Research, Technology, and Innovation Park (SRTIP) License.
+      </p>
+  
+      <p style="margin-bottom: 1.5vw; font-size: 1rem; text-align: left;">
+        At ElevatePro, we prioritize your privacy and strive to maintain the confidentiality of your personal information.
+      </p>
+  
+      <h3 style="font-size: 1.5rem; margin-top: 2vw; margin-bottom: 1vw;">Data Collection</h3>
+      <p style="margin-bottom: 1.5vw; font-size: 1rem; text-align: left;">
+        We collect only the necessary information required for processing your payments. When you proceed to make a payment, you will be redirected to an external third-party payment gateway. After completing your payment, you will be redirected to a payment success page within the website.
+      </p>
+      <p style="margin-bottom: 1.5vw; font-size: 1rem; text-align: left;">
+        We do not store any personal data beyond what is necessary for completing the payment process.
+      </p>
+  
+      <h3 style="font-size: 1.5rem; margin-top: 2vw; margin-bottom: 1vw;">Cookies</h3>
+      <p style="margin-bottom: 1.5vw; font-size: 1rem; text-align: left;">
+        We do not use cookies to track or store your personal data. Our platform does not engage in any form of tracking that would require cookie storage.
+      </p>
+  
+      <h3 style="font-size: 1.5rem; margin-top: 2vw; margin-bottom: 1vw;">Eligibility</h3>
+      <p style="margin-bottom: 1.5vw; font-size: 1rem; text-align: left;">
+        There is no age requirement to use ElevatePro. However, users must ensure that they comply with local laws and regulations regarding the use of online services.
+      </p>
     </div>
   </section>
+
 
   <footer id="footer" style="background-color: #1a1a1a; padding: 2rem 1rem; color: white; font-size: 1.1rem;">
     <div style="text-align: center;">
@@ -598,18 +425,17 @@ nav .logo {
     <div style="margin-left: 2rem; margin-bottom: 1rem; text-align: left;">
       <div style="margin-bottom: 0.5rem;">
         <strong>Email</strong><br>
-        <a href="mailto:contact@elevatepro.co" style="color: #ffffff; text-decoration: none;">contact@elevatepro.co</a>
+        <a href="mailto:contact@elevatepro.co" style="color: #ffffff; text-decoration: none;">elevategroup.uae@gmail.com</a>
       </div>
       <div style="margin-bottom: 0.5rem;">
         <strong>Phone</strong><br>
-        <a href="tel:+971509876543" style="color: #ffffff; text-decoration: none;">+971 50 987 6543</a>
+        <a href="tel:+971509876543" style="color: #ffffff; text-decoration: none;">+971585892092</a>
       </div>
       <div>
         <strong>Address</strong><br>
         Sharjah Research, Technology and Innovation Park (SRTIP), UAE
       </div>
     </div>
-
     <div style="margin-top: 1.5rem; text-align: center;">
         <a href="https://elevatepro-uae.github.io/ElevatePro/privacy-policy" style="color: #FFD700; margin: 0 10px; text-decoration: none;">Privacy Policy</a> |
         <a href="https://elevatepro-uae.github.io/ElevatePro/TermsAndConditions" style="color: #FFD700; margin: 0 10px; text-decoration: none;">Terms & Conditions</a> |
