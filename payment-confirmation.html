@@ -44,6 +44,7 @@ nav {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+  height: 8vw;
 }
 
 /* nav h1 {
@@ -542,6 +543,17 @@ nav .logo {
   transform: scale(1.05);
 }
 
+.brandlogo{
+    height: 11vw;
+    width: 11vw;
+}
+
+@media (max-width: 768px) {
+    .brandlogo{
+    height: 30vw;
+    width: 30vw;    
+};
+}
     
   </style>
 </head>
@@ -549,8 +561,10 @@ nav .logo {
 
 
 <nav>
-        <h1>ElevatePro</h1>
+        <!-- <h1>ElevatePro</h1>
+          -->
         <!-- <div class="logo"></div> -->
+        <a href="https://elevatepro-uae.github.io/ElevatePro" style="text-decoration: none;"><img class="brandlogo" src="images/brandlogo-2.png"></a>
     
         <!-- Hamburger Button -->
         <div class="hamburger" onclick="toggleMenu()">
@@ -561,27 +575,49 @@ nav .logo {
     
         <!-- Navigation Links -->
         <div class="nav-links">
-          <a href="#">About Us</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Career</a>
+          <a href="https://elevatepro-uae.github.io/ElevatePro/">Home</a>
+          <a href="https://elevatepro-uae.github.io/ElevatePro/privacy-policy">Privacy Policy</a>
+          <a href="https://elevatepro-uae.github.io/ElevatePro/TermsAndConditions">Terms & Conditions</a>
         </div>
 </nav>
 
 <section class="payment-confirmation">
     <div class="confirmation-box">
       <h2>🎉 Payment Successful!</h2>
-      <p>Thank you for your purchase. Your payment has been received successfully.</p>
-      <p><strong>Order ID:</strong> #ELEV123456</p>
+      <p>Thank you! Our team has received all your details and we will connect with you within 2 working days.</p>
+      <p><strong>Best wishes! Keep learning and growing!</strong></p>
       <a href="https://elevatepro-uae.github.io/ElevatePro/" class="button">Go to Homepage</a>
       <a href="#contact" class="button secondary">Contact Support</a>
     </div>
   </section>
 
+  <footer id="footer" style="background-color: #1a1a1a; padding: 2rem 1rem; color: white; font-size: 1.1rem;">
+    <div style="text-align: center;">
+        &copy; ElevatePro is a digital platform operated by Elevate Group FZE.
+      </div>
+    <div style="margin-left: 2rem; margin-bottom: 1rem; text-align: left;">
+      <div style="margin-bottom: 0.5rem;">
+        <strong>Email</strong><br>
+        <a href="mailto:contact@elevatepro.co" style="color: #ffffff; text-decoration: none;">contact@elevatepro.co</a>
+      </div>
+      <div style="margin-bottom: 0.5rem;">
+        <strong>Phone</strong><br>
+        <a href="tel:+971509876543" style="color: #ffffff; text-decoration: none;">+971 50 987 6543</a>
+      </div>
+      <div>
+        <strong>Address</strong><br>
+        Sharjah Research, Technology and Innovation Park (SRTIP), UAE
+      </div>
+    </div>
 
-  <footer>
-    <p>&copy; ElevatePro is a digital platform operated by Elevate Group FZE, a company incorporated in the Sharjah Research, Technology and Innovation Park (SRTIP), UAE.
-    </p>
+    <div style="margin-top: 1.5rem; text-align: center;">
+        <a href="https://elevatepro-uae.github.io/ElevatePro/privacy-policy" style="color: #FFD700; margin: 0 10px; text-decoration: none;">Privacy Policy</a> |
+        <a href="https://elevatepro-uae.github.io/ElevatePro/TermsAndConditions" style="color: #FFD700; margin: 0 10px; text-decoration: none;">Terms & Conditions</a> |
+        <a href="https://elevatepro-uae.github.io/ElevatePro" style="color: #FFD700; margin: 0 10px; text-decoration: none;">Home</a>  
+    </div>
+ 
   </footer>
+  
 
 <script>
   function toggleMenu() {
