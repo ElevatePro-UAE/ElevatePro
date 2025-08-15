@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElevatePro | Mock Interviews & CV Prep</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+nav {
+  background: #000000;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+  height: 8vw;
+}
+
+/* nav h1 {
+  font-size: 2rem;
+  color: #FFD700;
+} */
+
+nav h1 {
+  font-size: 2.2rem;
+  font-family: 'Cinzel', serif; /* Elegant, timeless serif font */
+  background: linear-gradient(90deg, #FFD700, #FFA500); /* Gold gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  cursor: default;
+}
+
+
+
+nav .logo {
+  width: 50px;
+  height: 50px;
+  background-color: #FFD700;
+  border-radius: 50%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #FFD700;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Logo Strip */
+.logo-strip {
+  padding: 2rem 3rem;
+  background-color: #333;
+  text-align: center;
+}
+
+.logo-strip h3 {
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.company-logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.company-logos img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    padding: 1rem 2rem;
+  }
+}
+
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    section:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+
+    h2 {
+      color: #FFD700;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p, ul li {
+      color: #eeeeee;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .card {
+      background: #2c2c2c; /* Darker background */
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card .tick {
+      color: #FFD700;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      color: #eeeeee;
+      font-size: 1rem;
+    }
+
+   
+    .text-content {
+      flex: 1 1 55%;
+      text-align: left;
+      margin-top: -3vw;
+      line-height: 2;
+    }
+
+    .image-slot {
+      flex: 1 1 40%;
+      height: 250px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    }
+
+    .image-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: auto;
+      border-radius: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, #FFD700, #ffb700);
+      color: #000;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+
+    .logo-strip {
+      background: #1a1a1a;
+      /* background-color: #4d4602; */
+      padding: 2rem;
+      text-align: center;
+      border-top: 2px solid #333;
+      border-bottom: 2px solid #333;
+    }
+
+    .logo-strip h3 {
+      color: #FFD700;
+      /* color: #000; */
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .company-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .company-logos img {
+      height: 40px;
+      object-fit: contain;
+      /* filter: brightness(0) invert(1); */
+    }
+
+    .job-help {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, #ff6f61, #ffcc70);
+      color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+
+    .job-help h2 {
+      font-size: 2rem;
+      color: #FFD700;
+      margin-bottom: 1rem;
+    }
+
+    .job-help p {
+      font-size: 1.2rem;
+      color: #eeeeee;
+    }
+
+    .one-on-one-logo {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    footer {
+      padding: 2rem;
+      /* font-size: 0.9rem; */
+    }
+
+    #header1Txt {
+      text-align: center;
+      margin-left: 5vw;
+      font-size: 1.8rem;
+      color: #FFD700;
+      margin-top: -2vw;
+      font-weight: 800;
+    }
+
+#offerings {
+     padding: 4rem 2rem;
+}
+
+.text-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #FFD700;
+  
+}
+
+.offerings-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.bundle {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 35vw;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bundle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.bundle-text {
+  background-color: rgb(6, 209, 255);
+  padding: 1rem;
+  text-align: center;
+  /* border-bottom-left-radius: 20px; */
+  /* border-bottom-right-radius: 20px; */
+  padding-bottom: 3vw;
+}
+
+.Package2{
+    background-color: #b576f8;
+}
+
+.bundle-text h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.price {
+  color: #000000;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.features p {
+  margin: 0.3rem 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.bundle-image {
+  flex-grow: 1;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  margin-top: -2vw;
+}
+
+#logo1{
+    margin-top: -3.5vw;
+    height: 10vw;
+    width: 10vw;
+}
+
+#logo4{
+    margin-top: -3.5vw;
+    height: 8.5vw;
+    width: 8.5vw;
+}
+
+
+#logo2{
+    margin-top: -2vw;
+    height: 8.5vw;
+    width: 8.5vw;
+}
+
+#logo5{
+    margin-top: -2.5vw;
+    height: 8vw;
+    width: 8vw;
+}
+
+#logo7{
+    margin-top: -3.25vw;
+    height: 9.5vw;
+    width: 9.5vw;
+}
+
+.GetNowBtn{
+      display: inline-block;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem 5rem;
+      /* background: linear-gradient(135deg, #080803, #252525);
+       */
+      background-color: #FEBD69;
+      color: #000;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(118, 118, 118, 0.3);
+      transition: transform 0.2s ease;
+      /* color: white; */
+}
+
+.GetNowBtn:hover{
+    transform: scale(1.05);
+}
+
+#whyTxt{
+        margin-top: -2rem;
+    }
+
+@media (max-width: 1024px) {
+
+  .bundle {
+      width: 80vw;
+    }
+    .bundle-image{
+    margin-top: -4vw;
+    }
+
+    .bundle:hover {
+        transform: scale(1.02);
+    }
+
+    #header1Txt{
+        margin-left: -5vw;
+    } 
+}
+
+@media (max-width: 768px) {
+    .bundle {
+        width: 80vw;
+        margin-top: -4vw;
+  }
+
+    .bundle-image{
+    margin-top: -4vw;
+    }
+
+    .bundle:hover {
+        transform: scale(1.02);
+    }
+    
+    #logo1, #logo4, #logo5{
+        margin-top: -10vw;
+        height: 30vw;
+        width: 30vw;
+    }
+
+    .image-slot {
+        height: 45vw;
+    }
+
+    /* .button{
+        margin-left: 8vw;
+    } */
+
+    #header1Txt{
+        margin-left: -5vw;
+    } 
+
+    .GetNowBtn{
+        margin-bottom: 1.75rem;
+    }
+
+    .GetNowBtn:hover{
+        transform: scale(1.02);
+    }
+
+    #whyTxt{
+        margin-top: -3rem;
+    }
+
+    .card:hover{
+        transform: scale(1.02);
+    }
+
+    #logo2, #logo7  {
+    margin-top: -4vw;
+    height: 25vw;
+    width: 25vw;
+}
+}
+
+/* perks for both colleges and individuals */
+.perks-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap; /* Make it responsive */
+  margin-top: 20px;
+}
+
+.perk-card {
+  background-color: #333;
+  border: 2px solid #ffd700; /* Luxurious golden border */
+  border-radius: 15px;
+  padding: 20px;
+  width: 30vw;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+  text-align: left;
+}
+
+.perk-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.perk-title {
+  font-size: 1.5rem;
+  color: #ffd700; /* Golden text */
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.perk-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.perk-list li {
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.perk-list li span {
+  margin-right: 8px;
+}
+
+.brandlogo{
+    height: 11vw;
+    width: 11vw;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .perk-card {
+    width: 90%; /* Make the cards take more width on smaller screens */
+    margin-bottom: 20px;
+  }
+ 
+  .brandlogo{
+    height: 30vw;
+    width: 30vw;    
+}
+nav{
+    height: 25vw
+};
+
+
+}
+
+
+
+    
+  </style>
+</head>
+<body>
+
+
+<nav>
+        <!-- <h1>ElevatePro</h1> -->
+        <div><img class="brandlogo" src="images/brandlogo-2.png"></div>
+    
+        <!-- Hamburger Button -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+    
+        <!-- Navigation Links -->
+        <div class="nav-links">
+          <a href="https://elevatepro-uae.github.io/ElevatePro/privacy-policy">Privacy Policy</a>
+          <a href="https://elevatepro-uae.github.io/ElevatePro/TermsAndConditions">Terms & Conditions</a>
+          <a href="#footer">Contact Us</a>
+        </div>
+</nav>
+
+  <section id="about">
+    <div id="header1Txt">Be Job-Ready with 1:1 Mentorship - Worldwide Industry experts & Leaders from IITs, NITs and IIMs are here for you!</div>
+    <div class="text-content">
+      <p style="text-align: left; margin-top: 3vw;">ElevatePro, a marketplace by Elevate Group FZE (UAE), empowers students to meet their career goals. We specialize in industry-grade mock interviews and CV building by connecting you with industry experts from the IIT, IIM and NIT alumni network, from top firms including Amazon, Deloitte, BNY Mellon, Landmark and a lot more. We help give you a boost to corporate relationships!</p>
+      <a href="#offerings" class="button">💻 Live 1-1 Sessions - Book Now</a>
+    </div>
+    <div class="image-slot"><img src="https://cdn.pixabay.com/photo/2024/03/21/09/52/ai-generated-8647282_1280.jpg" alt="About Image"></div>
+  </section>
+
+
+  <div class="logo-strip">
+    <h3>Connect with Industry Leaders & Experts From Companies Like:</h3>
+    <div class="company-logos">
+      <img id="logo1" src="https://download.logo.wine/logo/LinkedIn/LinkedIn-Logo.wine.png" alt="LinkedIn">
+      <img id="logo2" src="images/amazonLogo.png" alt="Amazon">
+      <img id="logo3" src="https://ebacoy2g8cy.exactdn.com/wp-content/uploads/2024/09/deloitte-logo-svg-vector-WHITE.png?strip=all&lossy=1&fit=800%2C223&ssl=1" alt="Deloitte">
+      <img id="logo4" src="images/BNY-Mellon-Logo.png" alt="BNY Mellon">
+      <img id="logo5" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce">
+      <img id="logo6" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg" alt="Walmart">
+      <img id="logo7" src="https://www.vyopta.com/wp-content/uploads/2019/08/Microsoft-Logo-White.png" alt="Microsoft">
+
+
+      
+    </div>
+  </div>
+
+  </div>
+
+  <section id="offerings">
+    <div class="text-content">
+      <h2 style="text-align:center; font-size: 2rem;">Our Offerings</h2>
+      <p class="text" style="text-align: center; color: white; font-weight: 900; font-size: 1.6rem; margin-top: -2vw;">
+        Register as a college or an individual, and start your elevated journey! 🚀
+    </p>
+      <div class="offerings-container">
+        <div class="bundle">
+          <div class="bundle-text Package1">
+            <h3>@ INR 8999/- per student</h3>
+            <!-- <p class="price">Rs. 6999</p> -->
+            <div class="features">
+              <p>✔ 5 Mock Interview Rounds & Feedback</p>
+              <p>✔ 3 CV Building Rounds & authentication</p>
+              <p>✔ Professional CV Writing Style and Tools</p>
+              <p>✔ Customized Preparation Kit</p>
+              <p>✔ Additional frameworks for answers</p>
+              <p>✔ Meet and Greet Industry Leaders</p>
+              <a href="https://buy.stripe.com/test_3csdTFdRe9fi4mYbIJ"><div class="GetNowBtn">Buy Now</div></a>
+            </div>
+          </div>
+          <div class="bundle-image" style="background-image: url('https://cdn.pixabay.com/photo/2024/06/03/09/27/woman-8805927_1280.jpg');"></div>
+        </div>
+  
+        <div class="bundle">
+          <div class="bundle-text Package2">
+            <h3>@ INR 12999/- per student</h3>
+            <!-- <p class="price">Rs. 8999</p> -->
+            <div class="features">
+              <p>✔ 10 Mock Interview Rounds & Feedback</p>
+              <p>✔ 5 CV Building Rounds & authentication</p>
+              <p>✔ Professional CV Writing Style and Tools</p>
+              <p>✔ Customized Preparation Kit</p>
+              <p>✔ Additional frameworks for answers</p>
+              <p>✔ Meet and Greet Industry Leaders</p>
+              <a href="https://buy.stripe.com/test_3csdTFdRe9fi4mYbIJ"><div class="GetNowBtn">Buy Now</div></a>
+            </div>
+          </div>
+          <div class="bundle-image" style="background-image: url('https://cdn.pixabay.com/photo/2024/03/27/04/59/ai-generated-8658200_1280.jpg');"></div>
+        </div>
+      </div>
+
+      <p class="text" style="text-align: center; color: white; font-weight: 900; font-size: 1.4rem; margin-top: 3vw; font-style: italic;">
+        "Provided as an additional benefit at no cost, this is our way of extending goodwill through our network to help deserving students connect with relevant career opportunities, by helping them provide job referrals."
+    </p>
+
+      <p class="text" style="text-align: center; color: white; font-weight: 900; font-size: 1.4rem; margin-top: 3vw;">
+        Select your package above to check-out!
+    </p>
+    </div>
+  </section>
+  
+  <!-- B2B Section: Placement Focused -->
+        <!-- perks -->
+  <section class="perks-section">
+    <h2 style="text-align:center; font-size: 2rem; margin-top: -5vw;">Boost Your Individual/College Placements</h2>
+    <div class="card-container" style="margin-top:-0.5vw;">
+      <!-- Card for Individuals -->
+      <div class="perk-card perk-left">
+        <h3 class="perk-title">Perks for Individuals</h3>
+        <ul class="perk-list">
+          <li>💼 Personalized Mock Interviews</li>
+          <li>🎯 Industry-Specific Guidance</li>
+          <li>📈 Professional CV Building</li>
+          <li>🚀 Personalized Prep Kit and Job Referrals</li>
+        </ul>
+      </div>
+  
+      <!-- Card for Colleges -->
+      <div class="perk-card perk-right">
+        <h3 class="perk-title">Perks for Colleges</h3>
+        <ul class="perk-list">
+          <li>🏢 Improved Placement Rates</li>
+          <li>🤝 Strengthen Corporate Relationships</li>
+          <li>🎓 Industry-Ready Graduates</li>
+          <li>📢 Enhanced College Reputation</li>
+        </ul>
+      </div>
+    </div>
+    <a href="#offerings" class="button">💻 Live 1-1 Sessions - Book Now</a>
+    <p class="text" style="text-align: center; color: white; font-size: 1rem; margin-top: -2vw; padding: 2vw;">
+        For colleges, we enhance placement rates through corporate partnerships, industry-led mock interviews, CV workshops, and real-world insights—strengthening your institution’s reputation. For individuals, our personalized interview prep, resume guidance, and referral support help you secure top-tier job opportunities with confidence.  
+    </p>
+  </section>
+        <!-- <div class="grid-container">
+           <div class="left-column">
+                <p class="text" style="text-align: justify; color: white;">
+                    Designed to empower both educational institutions and individual learners, placements are our top priority. We understand that successful student placements are not just a reflection of your college’s efforts but also a direct pathway to future growth. Our tailored mock interview sessions and industry-specific guidance ensure your students are not just job-ready but interview-ready for top-tier firms. With mock interview rounds conducted by top professionals, personalized CV building workshops, and real-world industry insights, your students will be fully prepared to meet the demands of the corporate world. This will directly lead to higher placement rates and a stronger reputation for your college.        
+                </p>
+
+                <ul class="benefit-list">
+                    <li>💼 Students get exposure to high-profile recruiters</li>
+                    <li>🚀 Increased placement rates for your college</li>
+                    <li>🤝 Direct access to placement drives and corporate sponsorships</li>
+                    <li>🎓 Better industry connections for students</li>
+                </ul>
+                <a href="#offerings" class="cta-button">Get Started Today</a>
+            </div>
+         
+        </div> -->
+
+
+  <section id="why">
+    <div class="text-content">
+      <h2 id="whyTxt">Why ElevatePro?</h2>
+
+      <div class="card">
+        <div class="tick">✔</div>
+        <p>Powered by <strong>Elevate Group FZE</strong> — backed by a network of strong industry connections</p>
+      </div>
+      
+      <div class="card">
+        <div class="tick">✔</div>
+        <p><strong>Marketplace Structure</strong> — connect with vetted professionals from global companies</p>
+      </div>
+      
+      <div class="card">
+        <div class="tick">✔</div>
+        <p><strong>Career-Centric</strong> — we focus on what gets you hired, not just academically sound</p>
+      </div>
+      
+      <div class="card">
+        <div class="tick">✔</div>
+        <p><strong>Global Readiness</strong> — aligned with expectations from UAE, India, US, UK job markets</p>
+      </div>
+      
+    <!-- <div class="image-slot"><img src="https://source.unsplash.com/400x250/?interview,coach" alt="Why ElevatePro"></div> -->
+  </section>
+
+
+  <!-- <div class="job-help">
+    <h2>How ElevatePro Can Help You Crack Your Job</h2>
+    <p>With personalized mock interviews, CV feedback, and guidance from top industry experts, ElevatePro helps you hone your skills and build the confidence needed to ace your job interviews. Whether you're targeting top firms or competitive industries, we equip you with the tools you need for success.</p>
+  </div> -->
+
+  <footer id="footer" style="background-color: #1a1a1a; padding: 2rem 1rem; color: white; font-size: 1.1rem;">
+    <div style="text-align: center; margin-bottom: 2vw;">
+        &copy; ElevatePro is a marketplace operated by Elevate Group FZE, connecting students and colleges with industry leaders and experts globally.
+      </div>
+    <div style="margin-left: 2rem; margin-bottom: 1rem; text-align: left;">
+      <div style="margin-bottom: 0.5rem;">
+        <strong>Email</strong><br>
+        <a href="mailto:elevategroup.uae@gmail.com" style="color: #ffffff; text-decoration: none;">elevategroup.uae@gmail.com</a>
+      </div>
+      <div style="margin-bottom: 0.5rem;">
+        <strong>Phone</strong><br>
+        <a href="tel:+971585892092" style="color: #ffffff; text-decoration: none;">+971585892092</a>
+      </div>
+      <div>
+        <strong>Address</strong><br>
+        Sharjah Research, Technology and Innovation Park (SRTIP), UAE
+      </div>
+    </div>
+    <div style="margin-top: 1.5rem; text-align: center;">
+        <a href="https://elevatepro-uae.github.io/ElevatePro/privacy-policy" style="color: #FFD700; margin: 0 10px; text-decoration: none;">Privacy Policy</a> |
+        <a href="https://elevatepro-uae.github.io/ElevatePro/TermsAndConditions" style="color: #FFD700; margin: 0 10px; text-decoration: none;">Terms & Conditions</a> |
+        <a href="#" style="color: #FFD700; margin: 0 10px; text-decoration: none;">Back to Top</a>
+        <!-- <a href="/refund-policy.html" style="color: #ffffff; margin: 0 10px; text-decoration: none;">Refund Policy</a> -->
+      </div>
+ 
+  </footer>
+  
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>  
+
+</body>
+</html>
